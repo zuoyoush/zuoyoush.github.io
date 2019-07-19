@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-20T03:01:25.487Z</updated>
+  <updated>2019-07-19T03:23:06.196Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>话费券的领取</title>
+    <link href="http://yoursite.com/2019/07/19/%E8%AF%9D%E8%B4%B9%E5%88%B8%E7%9A%84%E9%A2%86%E5%8F%96/"/>
+    <id>http://yoursite.com/2019/07/19/话费券的领取/</id>
+    <published>2019-07-19T02:53:08.000Z</published>
+    <updated>2019-07-19T03:23:06.196Z</updated>
+    
+    <content type="html"><![CDATA[<p>#领取话费券</p><blockquote><p>这里集合了所有话费券的领取方式</p></blockquote><p><img src="/img/img1.jpg" alt="图片解释" title="图片title"></p><ul><li><a href="www.baidu.com" title="超链接title">话费券领取地址一</a><ul><li>话费券领取地址附一</li></ul></li></ul><ul><li>话费券领取地址二<ul><li>话费券领取地址附二</li></ul></li></ul><ul><li>话费券领取地址三<ul><li>话费券领取地址附三</li></ul></li></ul><p>请看代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@ApiOperation(httpMethod = &quot;POST&quot;,value = &quot;获取医院通讯录&quot;,notes = &quot;Token!=null&quot;)</span><br><span class="line">   @RequestMapping(value = &quot;/getDoctorAddressList&quot;, method = RequestMethod.POST)</span><br><span class="line">   public CommonResponse&lt;List&lt;UserDoctorInfo&gt;&gt; getDoctorInfoList(@RequestBody DoctorAddressListRequest01 cr, HttpServletRequest request) &#123;</span><br><span class="line">       log.debug(&quot;开始....&quot;);</span><br><span class="line">       CommonResponse&lt;List&lt;UserDoctorInfo&gt;&gt; result = new CommonResponse();</span><br><span class="line">       List&lt;UserDoctorInfo&gt; response = null;</span><br><span class="line">       try &#123;</span><br><span class="line">           Assert.notNull(cr, &quot;请求协议错误&quot;);</span><br><span class="line"> </span><br><span class="line">           response=service.getDoctorInfoList(cr.getClinicId(),request);</span><br><span class="line"> </span><br><span class="line">           result.setStatus(SysConst.STATUS_SUCCESS);</span><br><span class="line">           result.setSuccessMsg(SysConst.STATUS_SUCCESS);</span><br><span class="line">       &#125; catch (Exception e) &#123;</span><br><span class="line">           log.error(e.getMessage());</span><br><span class="line">           result.setStatus(SysConst.STATUS_ERROR);</span><br><span class="line">           result.setErrorMsg(e.getMessage());</span><br><span class="line">       &#125;</span><br><span class="line">       result.setResult(response);</span><br><span class="line">       return result;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#领取话费券&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里集合了所有话费券的领取方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/img/img1.jpg&quot; alt=&quot;图片解释&quot; title=&quot;图片title&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
